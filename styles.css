@@ -1,0 +1,238 @@
+:root {
+  --color-white: hsl(0, 0%, 100%);
+  --color-stone-100: hsl(30, 54%, 90%);
+  --color-stone-150: hsl(30, 18%, 87%);
+  --color-stone-600: hsl(30, 10%, 34%);
+  --color-stone-900: hsl(24, 5%, 18%);
+  --color-brown-800: hsl(14, 45%, 36%);
+  --color-rose-800: hsl(332, 51%, 32%);
+  --color-rose-50: hsl(330, 100%, 98%);
+
+  --font-size-proportional: 2.5vh;
+  --font-size-standart: 16px;
+
+  --font-family-young-serif: "Young Serif", serif;
+  --font-family-outfit: "Outfit", sans-serif;
+
+  --spacing-px: 24px;
+  --spacing-em: 3em;
+}
+
+body {
+  margin: 0px;
+  background-color: var(--color-white);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.header__image {
+  height: 25vh;
+  width: 100%;
+  object-fit: fill;
+}
+
+.content {
+  padding: var(--spacing-px);
+  font-size: var(--font-size-proportional);
+  font-family: var(--font-family-outfit);
+  color: var(--color-stone-900);
+}
+
+.content h1 {
+  font-family: var(--font-family-young-serif);
+  font-size: 1.8em;
+  font-weight: 700;
+  color: var(--color-stone-900);
+  margin: 0px;
+}
+
+.content h2 {
+  font-family: var(--font-family-young-serif);
+  color: var(--color-brown-800);
+  margin: var(--spacing-px) 0px;
+}
+
+.content p {
+  font-family: var(--font-family-outfit);
+  margin: var(--spacing-px) 0px;
+  color: var(--color-stone-900);
+}
+
+.content__highlight {
+  background-color: var(--color-rose-50);
+  padding: var(--spacing-px);
+  border-radius: 10px;
+  font-family: var(--font-family-outfit);
+}
+
+.content__highlight h3 {
+  color: var(--color-rose-800);
+  margin: 0px;
+}
+
+.content__highlight ul {
+  padding-inline-start: var(--spacing-px);
+  color: var(--color-stone-900);
+  line-height: 1.5;
+  font-size: 1em;
+}
+
+.content__highlight li {
+  padding-left: var(--spacing-px);
+}
+
+.content__highlight li::marker {
+  color: var(--color-rose-800);
+}
+
+.content__ingredients ul {
+  padding-inline-start: var(--spacing-px);
+  color: var(--color-stone-900);
+  line-height: 1.5;
+  font-size: 1em;
+}
+
+.content__ingredients li {
+  padding-left: var(--spacing-px);
+}
+
+.content__ingredients li::marker {
+  color: var(--color-brown-800);
+}
+
+.content__instructions ol {
+  padding-inline-start: var(--spacing-px);
+  color: var(--color-stone-900);
+  line-height: 1.5;
+  font-size: 1em;
+}
+
+.content__instructions li {
+  padding-left: var(--spacing-px);
+  padding-bottom: 1em;
+}
+
+.content__instructions li::marker {
+  font-weight: 600;
+  color: var(--color-brown-800);
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+}
+
+.table__row {
+  padding: calc(var(--spacing-px) / 2) var(--spacing-px);
+  width: 100%;
+  display: flex;
+}
+
+.table__simple {
+  color: var(--color-stone-900);
+  width: 50%;
+}
+
+.table__colored {
+  color: var(--color-brown-800);
+  font-weight: 600;
+}
+
+.separator {
+  height: 1px;
+  color: var(--color-stone-150);
+  background: var(--color-stone-150);
+  font-size: 0;
+  border: 0;
+}
+
+@media (min-width: 540px) {
+  .header__image {
+    height: 40vh;
+  }
+
+  .content {
+    padding: var(--spacing-em);
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --spacing-em: calc(3em * 0.75);
+  }
+  
+  body {
+    background-color: var(--color-stone-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: calc(var(--spacing-em) * 3) 0px 0px 0px;
+  }
+
+  .container {
+    background-color: var(--color-white);
+    padding: var(--spacing-em);
+    width: 50vw;
+
+    border-radius: var(--spacing-px);
+  }
+
+  .content {
+    padding: var(--spacing-em) 0px 0px 0px;
+    font-size: var(--font-size-standart);
+  }
+
+  .content h1 {
+    font-size: 2.5em;
+  }
+
+  .attribution {
+    margin: calc(var(--spacing-em) * 3) 0px var(--spacing-em) 0px;
+  }
+}
+
+@media (min-width: 1400px) {
+  :root {
+    --spacing-em: calc(3em * 0.75);
+  }
+
+  body {
+    padding: calc(var(--spacing-em) * 3) 0px 0px 0px;
+  }
+
+  .header__image {
+    height: 25vh;
+    width: 100%;
+    object-fit: fill;
+  }
+
+  .container {
+    background-color: var(--color-white);
+    padding: var(--spacing-em);
+    width: 30vw;
+
+    border-radius: var(--spacing-px);
+  }
+
+  .content {
+    padding: var(--spacing-em) 0px 0px 0px;
+    font-size: var(--font-size-standart);
+  }
+
+  .content h1 {
+    font-size: 2.5em;
+  }
+
+  .attribution {
+    margin: calc(var(--spacing-em) * 3) 0px var(--spacing-em) 0px;
+  }
+}
